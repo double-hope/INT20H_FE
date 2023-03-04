@@ -1,4 +1,5 @@
 import { Layout } from 'components';
+import AboutUsPage from 'pages/about-us/AboutUs';
 import HomePage from 'pages/home/Home';
 import MissingPage from 'pages/missing/Missing';
 import PersistLoginPage from 'pages/persist-login/PersistLogin';
@@ -20,6 +21,7 @@ const AppRouter = () => {
           <Route path='login' element={<SignPage />} />
           <Route path='welcome' element={<WelcomePage />} />
           <Route path='unauthorized' element={<UnauthorizedPage />} />
+          <Route path='about-us' element={<AboutUsPage />} />
 
           <Route element={<PersistLoginPage />}>
             <Route element={<RequireAuthPage allowedRoles={[roles.USER]} />}>

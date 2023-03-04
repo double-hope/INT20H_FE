@@ -1,8 +1,12 @@
-import React from 'react'
+import { MentorContent, StudentContent } from 'components/content';
+import React from 'react';
+import * as styles from './styles';
 
 const ContentLayout = () => {
   return (
-    <div>component</div>
+    <div css={styles.layout}>
+      <StudentContent />
+    </div>
   )
 }
 

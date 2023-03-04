@@ -6,3 +6,4 @@ export * from './unauthorized/Unauthorized';
 export * from './require-auth/RequireAuth';
 export * from './home/Home';
 export * from './welcome/Welcome';
+export * from './about-us';

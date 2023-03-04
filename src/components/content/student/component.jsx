@@ -8,6 +8,7 @@ const student2 = require('assets/images/student2.jpg');
 const student3 = require('assets/images/student3.jpg');
 const student4 = require('assets/images/student4.png');
 const student5 = require('assets/images/student5.jpg');
+const student6 = require('assets/images/student6.jpg');
 
 const StudentContent = () => {
   return (
@@ -20,7 +21,7 @@ const StudentContent = () => {
             <PhotoCard image={student3} icon={faSquarePlus} name='My vacancies' />
             <PhotoCard image={student4} icon={faUserPlus} name='My team' />
             <PhotoCard image={student5} icon={faSquarePlus} name='My projects' />
-            <PhotoCard image={student1} icon={faSquarePlus} name='My coach' />
+            <PhotoCard image={student6} icon={faSquarePlus} name='My coach' />
         </div>
     </div>
   )

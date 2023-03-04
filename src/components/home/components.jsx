@@ -1,4 +1,4 @@
-import { StudentContent } from 'components/content'
+import { ContentLayout } from 'components/layout'
 import { Navigation } from 'components/primitives'
 import React from 'react'
 
@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div>
             <Navigation user={user} />
-            <StudentContent />
+            <ContentLayout />
         </div>
     )
 }
