@@ -17,7 +17,7 @@ const StudentContent = () => {
          
         <div css={styles.container}>
             <PhotoCard image={student1} icon={faUserPlus} name='My resume' />
-            <PhotoCard image={student2} icon={faMugHot} name='My portfolio' />
+            {/* <PhotoCard image={student2} icon={faMugHot} name='My portfolio' /> */}
             <PhotoCard image={student3} icon={faSquarePlus} name='My vacancies' />
             <PhotoCard image={student4} icon={faUserPlus} name='My team' />
             <PhotoCard image={student5} icon={faSquarePlus} name='My projects' />

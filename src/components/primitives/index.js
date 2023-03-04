@@ -10,3 +10,4 @@ export * from './photo-card';
 export * from './decoration';
 export * from './member-card';
 export * from './member-search';
+export * from './project-card';
