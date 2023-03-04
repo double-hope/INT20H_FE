@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "jsxImportSource": "@emotion/react",
+        "baseUrl": "src",
+        "paths": {
+            "assets/*": ["assets/*"],
+            "common/*": ["common/*"],
+            "components/*": ["components/*"],
+            "context/*": ["context/*"],
+            "helpers/*": ["helpers/*"],
+            "hooks/*": ["hooks/*"],
+            "pages/*": ["pages/*"],
+            "providers/*": ["providers/*"],
+            "router/*": ["router/*"],
+            "services/*": ["services/*"],
+            "store/*": ["store/*"],
+            "utils/*": ["utils/*"]
+        }
+    },
+    "include": [
+        "src"
+    ]
+}
