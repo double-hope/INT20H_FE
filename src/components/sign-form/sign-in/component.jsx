@@ -92,7 +92,7 @@ const SignInForm = ({toggleForms, forms}) => {
                         label='Password:'
                     />
                 </div>
-                <ResetButton text='Forgot your password?' onClick={toggleForms} type={ResetButtonTypeEnum.BOLD} id={forms.RESET.id} />
+                <ResetButton style={{marginBottom: '10px'}} onClick={toggleForms} type={ResetButtonTypeEnum.BOLD} id={forms.RESET.id}>Forgot your password?</ResetButton>
                 
                 <Button text='Sign In' stretched={true} shape={ButtonShapeEnum.RECTANGLE} />
 

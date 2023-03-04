@@ -37,7 +37,7 @@ const Verify = ({toggleForms, forms}) => {
             </form>
             <p css={styles.link}>
                 <span css={styles.line}>
-                    <ResetButton text='Sign In' onClick={toggleForms} id={forms.SIGN_IN.id} />
+                    <ResetButton onClick={toggleForms} id={forms.SIGN_IN.id}>Sign In</ResetButton>
                 </span>
             </p>
 

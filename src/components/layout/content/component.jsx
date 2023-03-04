@@ -1,4 +1,4 @@
-import { MentorContent, StudentContent } from 'components/content';
+import { StudentContent } from 'components/content';
 import React from 'react';
 import * as styles from './styles';
 

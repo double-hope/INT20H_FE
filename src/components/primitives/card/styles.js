@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 export const wrapper = () => css`
     background-color: #AE9AFF;
     border-radius: 16px;
-    width: 350px;
+    width: 300px;
     height: 200px;
     padding: 30px;
     z-index: 1;

@@ -6,7 +6,7 @@ export const button = () => css`
     text-decoration: underline;
     cursor: pointer;   
     font-weight: 500;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     z-index: 1;
 
     &[button-type=${ResetButtonTypeEnum.BOLD}] {

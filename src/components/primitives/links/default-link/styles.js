@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
-import { ButtonColorEnum, ButtonShapeEnum, ButtonSizeEnum } from 'common/enums';
+import { LinkColorEnum, LinkShapeEnum, LinkSizeEnum } from 'common/enums/components';
 
-export const button = (color, radius) => css`
+export const link = (color, radius) => css`
     position: relative;
     display: flex;
     justify-content: space-around;
@@ -10,13 +10,15 @@ export const button = (color, radius) => css`
     width: 100%;
     margin: 10px 0;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 20px;
     cursor: pointer;
     background-color: ${color};
     border-radius: ${radius};
+    text-decoration: none;
+    text-align: center;
 
-    &[button-color=${ButtonColorEnum.PRIMARY}] {
+    &[link-color=${LinkColorEnum.PRIMARY}] {
         border: 2px solid #3361FF;
         color: white;
 
@@ -25,7 +27,7 @@ export const button = (color, radius) => css`
         }
     }
 
-    &[button-color=${ButtonColorEnum.LIGHT}] {
+    &[link-color=${LinkColorEnum.LIGHT}] {
         box-shadow: 0px 2px 5px rgba(38, 51, 77, 0.03);
         border: 2px solid #F5F6F7;
         color: #6B7A99;
@@ -35,7 +37,7 @@ export const button = (color, radius) => css`
         }
     }
 
-    &[button-color=${ButtonColorEnum.DARK}] {
+    &[link-color=${LinkColorEnum.DARK}] {
         border: 2px solid #2D3C59;
         color: #7D8FB3;
 
@@ -44,7 +46,7 @@ export const button = (color, radius) => css`
         }
     }
 
-    &[button-color=${ButtonColorEnum.LILAC}] {
+    &[link-color=${LinkColorEnum.LILAC}] {
         border: 2px solid #AE9AFF;
         color: #241E51;
 
@@ -53,30 +55,30 @@ export const button = (color, radius) => css`
         }
     }
 
-    &[button-size=${ButtonSizeEnum.LARGE}] {
+    &[link-size=${LinkSizeEnum.LARGE}] {
         padding: 15px 25px;
         max-width: 173px;
-        font-size: 16px;
+        font-size: 14px;
         line-height: 30px;
     }
 
-    &[button-size=${ButtonSizeEnum.DEFAULT}] {
+    &[link-size=${LinkSizeEnum.DEFAULT}] {
         padding: 10px 20px;
         max-width: 157px;
     }
 
-    &[button-size=${ButtonSizeEnum.SMALL}] {
+    &[link-size=${LinkSizeEnum.SMALL}] {
         padding: 6px 15px;
         max-width: 133px;
     }
 
-    &[button-size=${ButtonSizeEnum.EXTRA_SMALL}] {
+    &[link-size=${LinkSizeEnum.EXTRA_SMALL}] {
         padding: 3px 10px;
         max-width: 109px;
-        font-size: 12px;
+        font-size: 10px;
     }
 
-    &[button-shape=${ButtonShapeEnum.RECTANGLE}] {
+    &[link-shape=${LinkShapeEnum.RECTANGLE}] {
         border-radius: 5px;
     }
 
@@ -128,7 +130,7 @@ export const button = (color, radius) => css`
         z-index: 1;
     }
 
-    &[button-stretched='true'] {
+    &[link-stretched='true'] {
         max-width: 300px;
     }
 `;

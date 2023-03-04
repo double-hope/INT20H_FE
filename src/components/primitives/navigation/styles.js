@@ -5,7 +5,7 @@ export const wrapper = () => css`
     flex-direction: column;
     justify-content: center;  
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     background-color: #171333;

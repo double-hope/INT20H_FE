@@ -13,7 +13,7 @@ export const container = () => css`
     & img {
         position: relative;
         top: 30px;
-        width: 300px;
+        width: 250px;
         height: 140px;
         object-fit: cover;
         border-radius: 100px 100px 0 0;

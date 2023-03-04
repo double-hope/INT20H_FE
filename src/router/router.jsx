@@ -1,6 +1,7 @@
 import { Layout } from 'components';
 import AboutUsPage from 'pages/about-us/AboutUs';
 import HomePage from 'pages/home/Home';
+import MembersPage from 'pages/members/Members';
 import MissingPage from 'pages/missing/Missing';
 import PersistLoginPage from 'pages/persist-login/PersistLogin';
 import RequireAuthPage from 'pages/require-auth/RequireAuth';
@@ -26,9 +27,8 @@ const AppRouter = () => {
           <Route element={<PersistLoginPage />}>
             <Route element={<RequireAuthPage allowedRoles={[roles.USER]} />}>
               <Route path='' element={<HomePage />} />
+              <Route path='members' element={<MembersPage />} />
             </Route>
-
-            <Route path='*' element={<MissingPage />} />
           </Route>
 
           <Route path='*' element={<MissingPage />} />
