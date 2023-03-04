@@ -5,6 +5,7 @@ import PersistLoginPage from 'pages/persist-login/PersistLogin';
 import RequireAuthPage from 'pages/require-auth/RequireAuth';
 import SignPage from 'pages/sign/Sign';
 import UnauthorizedPage from 'pages/unauthorized/Unauthorized';
+import WelcomePage from 'pages/welcome/Welcome';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
@@ -17,6 +18,7 @@ const AppRouter = () => {
     <Routes>
         <Route path='/' element={<Layout />}>
           <Route path='login' element={<SignPage />} />
+          <Route path='welcome' element={<WelcomePage />} />
           <Route path='unauthorized' element={<UnauthorizedPage />} />
 
           <Route element={<PersistLoginPage />}>
