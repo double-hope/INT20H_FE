@@ -44,6 +44,15 @@ position: relative;
         }
     }
 
+    &[button-color=${ButtonColorEnum.LILAC}] {
+        border: 2px solid #AE9AFF;
+        color: #241E51;
+
+        & svg {
+            color: #685BC7;
+        }
+    }
+
     &[button-size=${ButtonSizeEnum.LARGE}] {
         padding: 15px 25px;
         max-width: 173px;

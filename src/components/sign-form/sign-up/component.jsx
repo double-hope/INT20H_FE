@@ -124,10 +124,11 @@ const SignUpForm = ({toggleForms, forms}) => {
                 
                     <div css={styles.inputContainer}>
                         <Input 
-                            type='password' 
+                            type='text' 
                             id='last-name' 
                             onChange={(e) => setLastName(e.target.value)}
                             value={lastName}
+                            autoComplete='off'
                             required
 
                             label='Last name:'

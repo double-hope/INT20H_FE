@@ -34,20 +34,18 @@ const SignInForm = ({toggleForms, forms}) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        setEmail('');
-        setPassword('');
         dispatch(signIn({email, password}));
     }
 
     useEffect(() => {
-        if(status === DataStatusEnum.SUCCESS && tokens.length) { 
+        if(status === DataStatusEnum.SUCCESS && tokens) {
             const jwt = jwtDecode(tokens?.accessToken);
             setAuth({user: email, password, accessToken: tokens?.accessToken, roles: jwt?.roles});
             localStorage.setItem('session', JSON.stringify({user: {email, login: btoa(password), expired: false}}));
             navigate('/');
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [status]);
+    }, [status, tokens]);
 
     const facebook = (e) => {
         e.preventDefault();
@@ -66,7 +64,7 @@ const SignInForm = ({toggleForms, forms}) => {
 
     return (
         <section css={styles.wrapper}>
-            <h1>Welcome to dbxrhth</h1>
+            <h1>Welcome to JumpIn</h1>
             <p ref={errorRef} css={errMessage ? styles.errmsg : styles.offscreen} aria-live='assertive'>{errMessage}</p>
             <form onSubmit={handleSubmit} css={styles.signForm}>
                 <div css={styles.inputContainer}>
