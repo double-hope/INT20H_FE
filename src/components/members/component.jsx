@@ -48,10 +48,13 @@ const Members = () => {
         <div>
             <Navigation user={user} />
             <div css={styles.wrapper}>
-                <h2>All members</h2>
                 <div>
-                    <MemberSearchForm search={search} />
+                    <h1>All members</h1>
+                    <div>
+                        <MemberSearchForm search={search} />
+                    </div>
                 </div>
+                
                 <div css={styles.membersContainer}>
                     {members.map((member, i) => <MemberCard name={member.name} resume={member.resume} />)}
                 </div>

@@ -1,39 +1,20 @@
 import React from 'react';
-import { Button, ResetButton } from '../buttons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleMinus, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { Button } from '../buttons';
 import * as styles from './styles';
-import { ButtonColorEnum } from 'common/enums';
+import { ButtonColorEnum, ButtonSizeEnum } from 'common/enums';
+import { SortItem } from '../sort-item';
 
 const MemberSearchForm = ({search}) => {
   return (
     <form onSubmit={search} css={styles.form}>
-        <div css={styles.filter}>
-            <div css={styles.category}>Project Role</div>
-            <div css={styles.item}>Project manager</div>
-            <div css={styles.item}>Developer</div>
-            <ResetButton><FontAwesomeIcon icon={faCirclePlus} /></ResetButton>
-            <ResetButton><FontAwesomeIcon icon={faCircleMinus} /></ResetButton>
+        <div css={styles.container}>
+            <SortItem text='Language' checked={false} />
+            <SortItem text='Technology' checked />
+            <SortItem text='Workload' checked />
+            <SortItem text='Free' checked />
+            <SortItem text='Has resume' checked/>
         </div>
-        <div css={styles.filter}>
-            <div css={styles.category}>Language</div>
-            <div css={styles.item}>English</div>
-            <ResetButton><FontAwesomeIcon icon={faCirclePlus} /></ResetButton>
-            <ResetButton><FontAwesomeIcon icon={faCircleMinus} /></ResetButton>
-        </div>
-        <div css={styles.filter}>
-            <div css={styles.category}>Technology</div>
-            <div css={styles.item}>Jira</div>
-            <ResetButton><FontAwesomeIcon icon={faCirclePlus} /></ResetButton>
-            <ResetButton><FontAwesomeIcon icon={faCircleMinus} /></ResetButton>
-        </div>
-        <div css={styles.filter}>
-            <div css={styles.category}>Level</div>
-            <div css={styles.item}>Novice</div>
-            <ResetButton><FontAwesomeIcon icon={faCirclePlus} /></ResetButton>
-            <ResetButton><FontAwesomeIcon icon={faCircleMinus} /></ResetButton>
-        </div>
-        <Button text='Search' color={ButtonColorEnum.LILAC} />
+        <Button text='Search' color={ButtonColorEnum.LILAC} size={ButtonSizeEnum.SMALL} />
     </form>
   )
 }

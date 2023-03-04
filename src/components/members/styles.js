@@ -3,6 +3,18 @@ import { css } from "@emotion/react";
 export const wrapper = () => css`
     margin-left: 350px;
     padding: 30px;
+
+    & > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    & h1{
+        font-size: 50px;
+    }
 `;
 
 export const membersContainer = () => css`
