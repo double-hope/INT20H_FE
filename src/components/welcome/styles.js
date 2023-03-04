@@ -4,6 +4,13 @@ export const wrapper = () => css`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 100vh;
+
+    & h5 {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        font-weight: 900;
+    }
 `;
 
 export const background = () => css`
