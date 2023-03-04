@@ -6,3 +6,4 @@ export * from './links';
 export * from './background';
 export * from './card';
 export * from './navigation';
+export * from './photo-card';

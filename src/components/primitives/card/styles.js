@@ -3,9 +3,12 @@ import { css } from '@emotion/react';
 export const wrapper = () => css`
     background-color: #AE9AFF;
     border-radius: 16px;
-    width: 200px;
+    width: 350px;
     height: 200px;
     padding: 30px;
+    z-index: 1;
+    box-shadow: 10px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 `;
 
 export const content = () => css`
