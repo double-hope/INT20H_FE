@@ -25,7 +25,8 @@ export const info = () => css`
     width: 100%;
     white-space: nowrap;
     overflow: hidden; 
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
+    text-align: left; 
 
     & h2 {
         font-weight: 900;
@@ -42,15 +43,6 @@ export const info = () => css`
         bottom: 20px;
         cursor: pointer;
     }
-`;
-
-export const status = () => css`
-    margin: 10px 0;
-    display: inline-block;
-    background-color: #3361FF;
-    padding: 5px 15px;
-    border-radius: 20px;
-    color: white;
 `;
 
 export const tag = () => css`

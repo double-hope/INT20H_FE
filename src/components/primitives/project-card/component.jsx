@@ -16,7 +16,6 @@ const ProjectCard = ({project}) => {
         </div>
        
         <div css={styles.info}>
-            <div css={styles.status}>{project.status}</div>
             <h2>{project.name}</h2>
             <p>{project.description}</p>
             <h5>More information <FontAwesomeIcon icon={faArrowRightLong} /></h5>
