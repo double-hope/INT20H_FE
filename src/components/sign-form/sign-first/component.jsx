@@ -6,6 +6,7 @@ import { ResetPassword, TechnicalSupport } from '../forgot-password';
 import { Verify } from '../verify';
 import { EnterCredentials } from '../enter-credentials';
 import { Background } from 'components/primitives';
+import { motion } from 'framer-motion';
 
 const Sign = () => {
 
@@ -47,21 +48,21 @@ const Sign = () => {
     e.preventDefault();
     Object.values(forms).map(value => value.state(e.target.id === value.id));
   }
-  
+
   return (
     <div css={styles.wrapper}>
       <div css={styles.layout}>
         <div css={styles.aside}>
           <Background />
         </div>
-        <div css={styles.signForm}>
+        <motion.div css={styles.signForm}  initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.2 }}>
             {signInVisible && <SignInForm toggleForms={toggleForms} forms={forms} />}
             {signUpVisible && <SignUpForm toggleForms={toggleForms} forms={forms} />}
             {resetPasswordVisible && <ResetPassword toggleForms={toggleForms} forms={forms} />}
             {technicalSupportVisible && <TechnicalSupport toggleForms={toggleForms} forms={forms} />}
             {verifyVisible &&  <Verify toggleForms={toggleForms} forms={forms} />}
             {credentialsVisible && <EnterCredentials toggleForms={toggleForms} forms={forms} />}
-        </div>
+        </motion.div>
       </div>
     </div>
   )
