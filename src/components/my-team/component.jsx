@@ -8,11 +8,6 @@ import { faPencil, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const MyTeam = () => {
 
-    const user = {
-        name: 'Name',
-        role: 'Developer'
-    }
-
     const members = [
         {
             name: 'Name1',
@@ -46,7 +41,7 @@ const MyTeam = () => {
 
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>

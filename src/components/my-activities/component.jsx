@@ -10,17 +10,12 @@ const Activities = () => {
 
     const [applicationsChecked, setApplicationsChecked] = useState(true);
 
-    const user = {
-        name: 'Name',
-        role: 'Developer'
-    }
-
     const applications = ['Name of the project', 'Name of the project', 'Name of the project', 'Name of the project']
     const requests = ['Name of the project', 'Name of the project', 'Name of the project', 'Name of the project']
 
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>

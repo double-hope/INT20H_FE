@@ -18,7 +18,9 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 const roles = {
-  USER: 'USER',
+  CANDIDATE: 'CANDIDATE',
+  RECRUITER: 'RECRUITER',
+  COACH: 'COACH',
 }
 
 const AppRouter = () => {
@@ -31,7 +33,7 @@ const AppRouter = () => {
           <Route path='about-us' element={<AboutUsPage />} />
 
           <Route element={<PersistLoginPage />}>
-            <Route element={<RequireAuthPage allowedRoles={[roles.USER]} />}>
+            <Route element={<RequireAuthPage allowedRoles={[roles.CANDIDATE]} />}>
               <Route path='' element={<HomePage />} />
               <Route path='members' element={<MembersPage />} />
               <Route path='projects' element={<ProjectsPage />} />

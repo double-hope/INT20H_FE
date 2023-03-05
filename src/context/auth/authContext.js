@@ -1,7 +1,9 @@
 import { createContext } from 'react';
 
 const initialState = {
-    user: '',
+    firtName: '',
+    lastName: '',
+    email: '',
     password: '',
     roles: [],
     accessToken: ''

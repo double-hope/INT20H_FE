@@ -4,7 +4,7 @@ import { signIn, signUp, refreshToken } from './actions';
 
 const initialState = {
     user: null,
-    tokens: [],
+    tokens: null,
     message: null,
     status: DataStatusEnum.IDLE
 }

@@ -35,10 +35,6 @@ const Members = () => {
             resume: 'https://www.youtube.com/'
         }
     ]
-    const user = {
-        name: 'Name',
-        role: 'Member'
-    }
 
     const search = (e) => {
         e.preventDefault();
@@ -46,7 +42,7 @@ const Members = () => {
 
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <div>

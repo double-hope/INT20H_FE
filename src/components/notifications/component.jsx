@@ -5,14 +5,9 @@ import { ReactComponent as Icon } from 'assets/svgs/standing1.svg'
 
 const Notifications = () => {
 
-    const user = {
-        name: 'Name',
-        role: 'Developer'
-    }
-
   return (
     <div>
-        <Navigation user={user} />
+        <Navigation />
         <NotificationIcon />
         <div css={styles.wrapper}>
             <div css={styles.content}>
