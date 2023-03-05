@@ -10,3 +10,4 @@ export * from './about-us';
 export * from './members';
 export * from './projects';
 export * from  './my-projects';
+export * from './my-activities';
