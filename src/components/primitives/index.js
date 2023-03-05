@@ -12,3 +12,4 @@ export * from './member-card';
 export * from './member-search';
 export * from './project-card';
 export * from './sort-item';
+export * from './completed-project-card';

@@ -3,6 +3,7 @@ import AboutUsPage from 'pages/about-us/AboutUs';
 import HomePage from 'pages/home/Home';
 import MembersPage from 'pages/members/Members';
 import MissingPage from 'pages/missing/Missing';
+import MyProjectsPage from 'pages/my-projects/MyProjects';
 import PersistLoginPage from 'pages/persist-login/PersistLogin';
 import ProjectsPage from 'pages/projects/Projects';
 import RequireAuthPage from 'pages/require-auth/RequireAuth';
@@ -30,6 +31,7 @@ const AppRouter = () => {
               <Route path='' element={<HomePage />} />
               <Route path='members' element={<MembersPage />} />
               <Route path='projects' element={<ProjectsPage />} />
+              <Route path='my-projects' element={<MyProjectsPage />} />
             </Route>
           </Route>
 

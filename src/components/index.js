@@ -5,3 +5,4 @@ export * from './home';
 export * from './about';
 export * from './members';
 export * from './projects';
+export * from './my-projects';
