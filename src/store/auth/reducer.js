@@ -9,7 +9,7 @@ const initialState = {
     status: DataStatusEnum.IDLE
 }
 
-const reduser = createReducer(initialState, (builder) => {
+const reducer = createReducer(initialState, (builder) => {
     
     builder.addCase(signIn.pending, (state) => {
         state.status = DataStatusEnum.PENDING;
@@ -49,4 +49,4 @@ const reduser = createReducer(initialState, (builder) => {
 
 });
 
-export { reduser };
+export { reducer };

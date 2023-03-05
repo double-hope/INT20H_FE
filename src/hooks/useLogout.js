@@ -8,8 +8,6 @@ const useLogout = () => {
         setAuth({});
     }
 
-    // add logout from backend side
-
     return logout;
 }
 

@@ -4,7 +4,7 @@ export const wrapper = () => css`
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 10px;
     right: 10px;
     background: #3361FF;

@@ -77,8 +77,8 @@ const MyTeam = () => {
                                     <ResetButton><FontAwesomeIcon icon={faXmark} /></ResetButton>
                                 </div>
                             </div>
-                            <Button text='Add new member' color={ButtonColorEnum.LIGHT} />
-                            <Button text='Remove member' color={ButtonColorEnum.LIGHT} />
+                            <Button text='Add new member' color={ButtonColorEnum.LIGHT_ACCENT} />
+                            <Button text='Remove member' color={ButtonColorEnum.LIGHT_ACCENT} />
                         </div>
                         <h2>Application in my team</h2>
                         <div css={styles.membersContainer}>
