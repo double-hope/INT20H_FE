@@ -4,11 +4,12 @@ import { create } from './actions';
 
 const initialState = {
     project: null,
+    message: null,
     status: DataStatusEnum.IDLE
 }
 
 const reducer = createReducer(initialState, (builder) => {
-    
+
     builder.addCase(create.pending, (state) => {
         state.status = DataStatusEnum.PENDING;
     });
@@ -17,6 +18,12 @@ const reducer = createReducer(initialState, (builder) => {
         const { project } = payload;
         state.project = project;
         state.status = DataStatusEnum.SUCCESS;
+    });
+
+    builder.addCase(create.rejected, (state, { payload }) => {
+        const { message } = payload;
+        state.message = message;
+        state.status = DataStatusEnum.ERROR;
     });
     
 });
