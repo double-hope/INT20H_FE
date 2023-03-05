@@ -38,10 +38,18 @@ const SignInForm = ({toggleForms, forms}) => {
     }
 
     useEffect(() => {
-        if(status === DataStatusEnum.SUCCESS && tokens) {
+        console.log(tokens);
+        if(status === DataStatusEnum.SUCCESS && tokens && email && password) {
             const jwt = jwtDecode(tokens?.accessToken);
-            setAuth({user: email, password, accessToken: tokens?.accessToken, roles: jwt?.roles});
-            localStorage.setItem('session', JSON.stringify({user: {email, login: btoa(password), expired: false}}));
+            setAuth(prev =>{
+                return {
+                    ...prev, 
+                    email, 
+                    password, 
+                    accessToken: tokens?.accessToken, 
+                    roles: jwt?.roles
+                }});
+            localStorage.setItem('session', JSON.stringify({ ...JSON.parse(localStorage.getItem('session')), email, login: btoa(password), expired: false}));
             navigate('/');
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -61,6 +69,8 @@ const SignInForm = ({toggleForms, forms}) => {
         if(!!message)
             setErrMessage(message);
     }, [message]);
+
+
 
     return (
         <section css={styles.wrapper}>
@@ -97,7 +107,7 @@ const SignInForm = ({toggleForms, forms}) => {
                 <Button text='Sign In' stretched={true} shape={ButtonShapeEnum.RECTANGLE} />
 
                 <h5>OR</h5>
-                <OAuthLink icon={faGoogle} text='Login with Google' to={'http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:8080/regsiter-step2'} />
+                <OAuthLink icon={faGoogle} text='Login with Google' to={'http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:8080/auth/sign-up'} />
                 <OAuthButton icon={faFacebook} text='Login with Facebook' onClick={facebook} />
                 <OAuthButton icon={faGithub} text='Login with Github' onClick={github} />
                 <p css={styles.smallInfo}>By signing up, you agree to the Terms or Service anf Privacy Policy, including Cookie Use.</p>

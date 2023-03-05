@@ -13,7 +13,7 @@ const useLogin = () => {
     const [ session ] = useLocalStorage('session', '');
 
     const login = async () => {
-        await dispatch(signIn({email: session?.user?.email, password: atob(session?.user?.login)}));
+        await dispatch(signIn({email: session?.email, password: atob(session?.login)}));
     }
 
     useEffect(() => {
@@ -21,8 +21,10 @@ const useLogin = () => {
             const jwt = jwtDecode(tokens?.accessToken);
 
             setAuth({
-                    user: session?.user?.email,
-                    password: atob(session?.user?.login),
+                    firstName: session?.firstName,
+                    lastName: session?.lastName,
+                    email: session?.email,
+                    password: atob(session?.login),
                     roles: jwt?.roles,
                     accessToken: tokens?.accessToken
             });

@@ -7,13 +7,9 @@ import { ReactComponent as Icon } from 'assets/svgs/person.svg'
 
 const Resume = () => {
 
-    const user = {
-        name: 'Name',
-        role: 'Member'
-    }
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>

@@ -1,14 +1,12 @@
 import { useAuth } from './useAuth';
 
 const useLogout = () => {
-    const { setAuth } = useAuth();
+    const { auth, setAuth } = useAuth();
 
     const logout = async () => {
+        localStorage.setItem('session', JSON.stringify({firstName: auth?.firstName, lastName: auth?.lastName}));
         setAuth({});
-        localStorage.removeItem('session');
     }
-
-    // add logout from backend side
 
     return logout;
 }

@@ -4,13 +4,10 @@ import * as styles from './styles';
 import { CreateProject } from '../create-project';
 
 const ProjectLayout = () => {
-    const user = {
-        name: 'Name',
-        role: 'Member'
-    }
+
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.project}>
                 <CreateProject />

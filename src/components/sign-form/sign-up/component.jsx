@@ -63,7 +63,7 @@ const SignUpForm = ({toggleForms, forms}) => {
             return;
         }
         
-        dispatch(signUp({ email, password }));
+        dispatch(signUp({ email, password, firstName, lastName, authProvider: 'LOCAL' }));
         setDisabled(false);
     }
     
@@ -80,7 +80,10 @@ const SignUpForm = ({toggleForms, forms}) => {
             }
         }
         
-        if(status === DataStatusEnum.SUCCESS) toggleForms(verify);
+        if(status === DataStatusEnum.SUCCESS) {
+            localStorage.setItem('session', JSON.stringify({firstName, lastName}));
+            toggleForms(verify);
+        }
         if(status !== DataStatusEnum.PENDING) setDisabled(true);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps

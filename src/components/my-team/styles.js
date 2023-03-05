@@ -21,8 +21,11 @@ export const myTeamForm = () => css`
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    background: #2D3C59;
-    box-shadow: 19px 4px 4px rgba(0, 0, 0, 0.25);
+    background: #fff;
+    box-shadow: 23px -23px 45px #FFFFFF, 
+                28px 28px 50px rgba(80, 80, 80, 0.25), 
+                inset -31px -31px 43px rgba(255, 255, 255, 0.65), 
+                inset 26px 26px 48px rgba(119, 119, 119, 0.25);
     border-radius: 30px;
     padding: 40px;
     max-width: 650px;
@@ -37,7 +40,7 @@ export const teammate = () => css`
     margin: 10px 0;
 
     & h3 {
-        background: #FFFFFF;
+        border-left: 2px solid #202B40;
         border-radius: 20px;
         padding: 15px 30px;
     }
@@ -47,6 +50,7 @@ export const teammate = () => css`
         border-radius: 20px;
         padding: 15px 30px;
         font-weight: 900;
+        color: white;
     }
 `;
 
@@ -91,7 +95,7 @@ export const itemsWrapper = () => css`
 
 export const icons = () => css`
     position: absolute;
-    right: -50px;
+    right: -100px;
     top: 50%;
     transform: translateY(-50%);
     color: #C3CAD9;

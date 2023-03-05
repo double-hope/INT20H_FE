@@ -8,11 +8,6 @@ import { faPencil, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const MyTeam = () => {
 
-    const user = {
-        name: 'Name',
-        role: 'Developer'
-    }
-
     const members = [
         {
             name: 'Name1',
@@ -46,7 +41,7 @@ const MyTeam = () => {
 
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>
@@ -82,8 +77,8 @@ const MyTeam = () => {
                                     <ResetButton><FontAwesomeIcon icon={faXmark} /></ResetButton>
                                 </div>
                             </div>
-                            <Button text='Add new member' color={ButtonColorEnum.LIGHT} />
-                            <Button text='Remove member' color={ButtonColorEnum.LIGHT} />
+                            <Button text='Add new member' color={ButtonColorEnum.LIGHT_ACCENT} />
+                            <Button text='Remove member' color={ButtonColorEnum.LIGHT_ACCENT} />
                         </div>
                         <h2>Application in my team</h2>
                         <div css={styles.membersContainer}>

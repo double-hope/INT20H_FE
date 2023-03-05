@@ -3,12 +3,13 @@ import { HttpMethodEnum, HttpHeaderEnum } from 'common';
 export let statusCode;
 let okStatus;
 
-class Http {
-    load(url, options){ 
-        const { method = HttpMethodEnum.GET, payload = null, contentType, credentials } = options;
+class PrivateHttp {
+    load(url, options){
+        const { method = HttpMethodEnum.GET, payload = null, contentType, credentials, authorization } = options;
         const headers = this._getHeaders({
             contentType,
             credentials,
+            authorization,
         });
 
         return fetch(url, {
@@ -22,12 +23,14 @@ class Http {
             .catch(this._throwError);
     }
 
-    _getHeaders({ contentType, credentials }) {
+    _getHeaders({ contentType, credentials, authorization }) {
         const headers = new Headers();
 
         if (contentType) headers.append(HttpHeaderEnum.CONTENT_TYPE, contentType);
         
         if(credentials) headers.append(HttpHeaderEnum.CREDENTIALS, credentials);
+
+        if(authorization) headers.append(HttpHeaderEnum.AUTHORIZATION, `Bearer ${authorization}`);
 
         return headers;
     }
@@ -61,4 +64,4 @@ class Http {
     }
 }
 
-export { Http };
+export { PrivateHttp };

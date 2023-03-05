@@ -7,14 +7,9 @@ const Projects = ({projects}) => {
 
     const [search, setSearch] = useState('');
 
-    const user = {
-        name: 'Name',
-        role: 'Member'
-    }
-
     return (
         <div>
-            <Navigation user={user} />
+            <Navigation />
             <NotificationIcon />
             <div css={styles.wrapper}>
                 <h1>All projects</h1>

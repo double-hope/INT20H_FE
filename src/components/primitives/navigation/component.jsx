@@ -4,10 +4,13 @@ import { Button } from '../buttons';
 import { ButtonColorEnum } from 'common/enums';
 import { useNavigate } from 'react-router';
 import { useLogout } from 'hooks/useLogout';
+import { useAuth } from 'hooks/useAuth';
 
-const Navigation = ({user}) => {
+const Navigation = () => {
+
     const navigate = useNavigate();
     const _logout = useLogout();
+    const { auth } = useAuth()
 
     const main = () => {
         navigate('/')
@@ -42,9 +45,9 @@ const Navigation = ({user}) => {
             <h5>Community</h5>
             <div css={styles.content}>
                 <div css={styles.user}>
-                    {user.name}
+                    {auth.firstName}
                     <div css={styles.role}>
-                        {user.role}
+                        {auth.roles[0]}
                     </div>
                 </div>
                 <div css={styles.navigation}>

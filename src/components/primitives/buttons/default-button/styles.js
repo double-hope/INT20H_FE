@@ -35,6 +35,16 @@ export const button = (color, radius) => css`
         }
     }
 
+    &[button-color=${ButtonColorEnum.LIGHT_ACCENT}] {
+        box-shadow: 0px 2px 5px #202B4050;
+        border: 2px solid #202B4060;
+        color: #6B7A99;
+
+        & svg {
+            color: #C3CAD9;
+        }
+    }
+
     &[button-color=${ButtonColorEnum.DARK}] {
         border: 2px solid #2D3C59;
         color: #7D8FB3;

@@ -1,28 +1,45 @@
 import { ButtonColorEnum } from 'common/enums';
 import { Button } from 'components/primitives';
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as styles from './styles';
 import { useNavigate } from 'react-router';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { create } from 'store/project';
+import { useAuth } from 'hooks/useAuth';
+import { useRefreshToken } from 'hooks/useRefreshToken';
 
 const CreateProject = () => {
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const refresh = useRefreshToken();
+    const { auth } = useAuth();
+    const { project } = useSelector(state => state.project);
 
     const [name, setName] = useState('');
     const [repository, setRepository] = useState('');
     const [description, setDescription] = useState('');
 
+    useEffect(() => {
+        refresh();
+    }, []);
+
     const allProjects = () => {
         navigate('/projects');
     }
+
+    const submit = async (e) => {
+        e.preventDefault();
+        dispatch(create({ body: {title: name, description, repositoryUrl: repository}, authorization: auth.accessToken}));
+    } 
 
     return (
         <div css={styles.wrapper}>
             <div css={styles.container}>
                 <h2>Create my project</h2>
-                <form css={styles.form}>
+                <form css={styles.form} onSubmit={submit} >
                     <div css={styles.currentProject}>Current Project</div>
                     <div css={styles.input}>
                         <h2>Project name</h2>
