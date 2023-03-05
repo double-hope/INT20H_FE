@@ -13,6 +13,7 @@ export const wrapper = () => css`
     height: 60px;
     font-size: 20px;
     color: white;
+    z-index: 10;
     cursor: pointer;
 `;
 
@@ -25,5 +26,4 @@ export const notification = () => css`
     border-radius: 50%;
     background: #FF2727;
     border: 2px solid #3361FF;
-    z-index: 10;
 `;

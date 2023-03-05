@@ -4,6 +4,7 @@ import HomePage from 'pages/home/Home';
 import MembersPage from 'pages/members/Members';
 import MissingPage from 'pages/missing/Missing';
 import MyActivitiesPage from 'pages/my-activities/Activities';
+import MyNotificationsPage from 'pages/my-notifications/MyNotifications';
 import MyProjectsPage from 'pages/my-projects/MyProjects';
 import MyTeamPage from 'pages/my-team/MyTeam';
 import PersistLoginPage from 'pages/persist-login/PersistLogin';
@@ -38,6 +39,7 @@ const AppRouter = () => {
               <Route path='my-activities' element={<MyActivitiesPage />} />
               <Route path='my-profile' element={<MyResumePage />} />
               <Route path='my-team' element={<MyTeamPage />} />
+              <Route path='my-notifications' element={<MyNotificationsPage />} />
             </Route>
           </Route>
 
