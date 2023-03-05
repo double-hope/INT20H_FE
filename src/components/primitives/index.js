@@ -15,3 +15,4 @@ export * from './sort-item';
 export * from './completed-project-card';
 export * from './application-card';
 export * from './request-card';
+export * from './notification-icon';

@@ -1,4 +1,4 @@
-import { Button, Navigation, ProjectCard, SearchInput } from 'components/primitives';
+import { Button, Navigation, NotificationIcon, ProjectCard, SearchInput } from 'components/primitives';
 import React, { useState } from 'react';
 import * as styles from './styles';
 import { ButtonColorEnum, ButtonSizeEnum } from 'common/enums';
@@ -15,6 +15,7 @@ const Projects = ({projects}) => {
     return (
         <div>
             <Navigation user={user} />
+            <NotificationIcon />
             <div css={styles.wrapper}>
                 <h1>All projects</h1>
                 <h4>Find your future team</h4>

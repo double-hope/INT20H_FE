@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './styles';
-import { Button, Navigation, ResetButton, RoundedInput } from 'components/primitives';
+import { Button, Navigation, NotificationIcon, ResetButton, RoundedInput } from 'components/primitives';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil } from '@fortawesome/free-solid-svg-icons';
 import { ReactComponent as Icon } from 'assets/svgs/person.svg'
@@ -14,6 +14,7 @@ const Resume = () => {
     return (
         <div>
             <Navigation user={user} />
+            <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>
                     <div css={styles.zIndex}>

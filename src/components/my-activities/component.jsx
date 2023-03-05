@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as styles from './styles';
-import { Button, Navigation } from 'components/primitives';
+import { Button, Navigation, NotificationIcon } from 'components/primitives';
 import { ApplicationCard } from 'components/primitives/application-card';
 import { ButtonColorEnum, ButtonSizeEnum } from 'common/enums';
 import { RequestCard } from 'components/primitives/request-card';
@@ -21,6 +21,7 @@ const Activities = () => {
     return (
         <div>
             <Navigation user={user} />
+            <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>
                     <div css={styles.zIndex}>

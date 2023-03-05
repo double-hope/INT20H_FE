@@ -1,7 +1,7 @@
 import { MemberCard } from 'components/primitives/member-card';
 import React from 'react';
 import * as styles from './styles';
-import { MemberSearchForm, Navigation } from 'components/primitives';
+import { MemberSearchForm, Navigation, NotificationIcon } from 'components/primitives';
 
 const Members = () => {
 
@@ -47,6 +47,7 @@ const Members = () => {
     return (
         <div>
             <Navigation user={user} />
+            <NotificationIcon />
             <div css={styles.wrapper}>
                 <div>
                     <h1>All members</h1>

@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './styles';
-import { Button, MemberCard, Navigation, ResetButton } from 'components/primitives';
+import { Button, MemberCard, Navigation, NotificationIcon, ResetButton } from 'components/primitives';
 import { ReactComponent as Icon } from 'assets/svgs/standing.svg'
 import { ButtonColorEnum } from 'common/enums';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -47,6 +47,7 @@ const MyTeam = () => {
     return (
         <div>
             <Navigation user={user} />
+            <NotificationIcon />
             <div css={styles.wrapper}>
                 <div css={styles.content}>
                     <div css={styles.zIndex}>

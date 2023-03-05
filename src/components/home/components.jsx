@@ -1,5 +1,5 @@
 import { ContentLayout } from 'components/layout'
-import { Navigation } from 'components/primitives'
+import { Navigation, NotificationIcon } from 'components/primitives'
 import React from 'react'
 
 const Home = () => {
@@ -13,6 +13,7 @@ const Home = () => {
         <div>
             <Navigation user={user} />
             <ContentLayout />
+            <NotificationIcon />
         </div>
     )
 }
