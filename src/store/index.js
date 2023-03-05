@@ -25,8 +25,7 @@ const store = configureStore({
         project,
     }),
     middleware,
-    // uncomment in prod
-    // devTools: false 
+    devTools: false 
 });
 
 export { store };

@@ -38,7 +38,6 @@ const SignInForm = ({toggleForms, forms}) => {
     }
 
     useEffect(() => {
-        console.log(tokens);
         if(status === DataStatusEnum.SUCCESS && tokens && email && password) {
             const jwt = jwtDecode(tokens?.accessToken);
             setAuth(prev =>{
