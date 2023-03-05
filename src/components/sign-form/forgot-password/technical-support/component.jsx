@@ -25,7 +25,7 @@ const TechnicalSupport = ({toggleForms, forms}) => {
             <p css={styles.link}>
                 or<br />
                 <span css={styles.line}>
-                    <ResetButton text='Sign Up' onClick={toggleForms} id={forms.SIGN_UP.id} />
+                    <ResetButton onClick={toggleForms} id={forms.SIGN_UP.id}>Sign Up</ResetButton >
                 </span>
             </p>
 

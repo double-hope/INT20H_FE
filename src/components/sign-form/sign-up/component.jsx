@@ -99,7 +99,7 @@ const SignUpForm = ({toggleForms, forms}) => {
     return (
         <section css={styles.wrapper}>
             <h1>Sign up</h1>
-            <p css={styles.smallInfo}>Already have an account? <ResetButton text='Sign In' onClick={toggleForms} id={forms.SIGN_IN.id} /></p>
+            <p css={styles.smallInfo}>Already have an account? <ResetButton onClick={toggleForms} id={forms.SIGN_IN.id}>Sign In</ResetButton></p>
             <OAuthLink icon={faGoogle} text='Login with Google' to={'http://localhost:8080/oauth2/authorize/google?redirect_uri=http://localhost:8080/regsiter-step2'} />
             <OAuthButton icon={faFacebook} text='Login with Facebook' onClick={facebook} />
             <OAuthButton icon={faGithub} text='Login with Github' onClick={github} />
@@ -124,10 +124,11 @@ const SignUpForm = ({toggleForms, forms}) => {
                 
                     <div css={styles.inputContainer}>
                         <Input 
-                            type='password' 
+                            type='text' 
                             id='last-name' 
                             onChange={(e) => setLastName(e.target.value)}
                             value={lastName}
+                            autoComplete='off'
                             required
 
                             label='Last name:'

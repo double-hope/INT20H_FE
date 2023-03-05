@@ -1,10 +1,10 @@
 import { ResetButtonTypeEnum } from 'common/enums';
 import * as styles from './styles';
 
-const ResetButton = ({text, onClick, type, ...props}) => {
+const ResetButton = ({onClick, type, children, ...props}) => {
   return (
     <button css={styles.button} onClick={onClick} button-type={type} {...props}>
-      {text}
+      {children}
     </button>
   )
 }

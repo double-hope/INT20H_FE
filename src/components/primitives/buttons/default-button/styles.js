@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import { ButtonColorEnum, ButtonShapeEnum, ButtonSizeEnum } from 'common/enums';
 
 export const button = (color, radius) => css`
-position: relative;
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -10,7 +10,7 @@ position: relative;
     width: 100%;
     margin: 10px 0;
     font-weight: 900;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 20px;
     cursor: pointer;
     background-color: ${color};
@@ -44,10 +44,19 @@ position: relative;
         }
     }
 
+    &[button-color=${ButtonColorEnum.LILAC}] {
+        border: 2px solid #AE9AFF;
+        color: #241E51;
+
+        & svg {
+            color: #685BC7;
+        }
+    }
+
     &[button-size=${ButtonSizeEnum.LARGE}] {
         padding: 15px 25px;
         max-width: 173px;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 30px;
     }
 
@@ -64,7 +73,7 @@ position: relative;
     &[button-size=${ButtonSizeEnum.EXTRA_SMALL}] {
         padding: 3px 10px;
         max-width: 109px;
-        font-size: 10px;
+        font-size: 12px;
     }
 
     &[button-shape=${ButtonShapeEnum.RECTANGLE}] {
