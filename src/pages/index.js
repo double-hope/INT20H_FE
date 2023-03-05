@@ -12,3 +12,4 @@ export * from './projects';
 export * from  './my-projects';
 export * from './my-activities';
 export * from './resume';
+export * from './my-team';
