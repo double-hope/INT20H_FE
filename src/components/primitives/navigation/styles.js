@@ -9,7 +9,7 @@ export const wrapper = () => css`
     top: 0;
     bottom: 0;
     background-color: #171333;
-    width: 350px;
+    width: 23vw;
     height: 100%;
     padding: 20px 30px;
     color: white;

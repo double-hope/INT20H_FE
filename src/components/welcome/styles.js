@@ -9,6 +9,7 @@ export const wrapper = () => css`
         position: absolute;
         top: 30px;
         left: 30px;
+        font-size: 30px;
         font-weight: 900;
     }
 `;

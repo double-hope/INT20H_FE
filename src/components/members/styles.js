@@ -1,7 +1,7 @@
 import { css } from "@emotion/react";
 
 export const wrapper = () => css`
-    margin-left: 350px;
+    margin-left: 23vw;
     padding: 30px;
 
     & > div:first-of-type {

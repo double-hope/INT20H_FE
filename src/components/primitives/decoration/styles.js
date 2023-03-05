@@ -1,6 +1,7 @@
 import { css } from '@emotion/react';
 
 export const background = () => css`
+    align-self: center;
     display: grid;
     grid-template-columns: repeat(3, 180px);
     grid-template-rows: repeat(2, 180px);

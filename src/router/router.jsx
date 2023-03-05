@@ -8,6 +8,7 @@ import MyProjectsPage from 'pages/my-projects/MyProjects';
 import PersistLoginPage from 'pages/persist-login/PersistLogin';
 import ProjectsPage from 'pages/projects/Projects';
 import RequireAuthPage from 'pages/require-auth/RequireAuth';
+import MyResumePage from 'pages/resume/Resume';
 import SignPage from 'pages/sign/Sign';
 import UnauthorizedPage from 'pages/unauthorized/Unauthorized';
 import WelcomePage from 'pages/welcome/Welcome';
@@ -34,6 +35,7 @@ const AppRouter = () => {
               <Route path='projects' element={<ProjectsPage />} />
               <Route path='my-projects' element={<MyProjectsPage />} />
               <Route path='my-activities' element={<MyActivitiesPage />} />
+              <Route path='my-profile' element={<MyResumePage />} />
             </Route>
           </Route>
 

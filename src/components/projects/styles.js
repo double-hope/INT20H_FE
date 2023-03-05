@@ -6,7 +6,7 @@ export const wrapper = () => css`
     justify-content: center;
     align-items: center;
     gap: 10px;
-    margin-left: 350px;
+    margin-left: 23vw;
     padding: 30px;
     & h1{
         font-size: 50px;
