@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useAuth, useLocalStorage } from 'hooks';
 import { useLogin } from 'hooks/useLogin';
+import { MutatingDots } from 'react-loader-spinner';
 
 const PersistLoginPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -34,7 +35,19 @@ const PersistLoginPage = () => {
   return (
       <>
           {isLoading
-            ? <p>Loading...</p>
+            ? <div style={{width: '100vw', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <MutatingDots 
+                  height='100'
+                  width='100'
+                  color='#AE9AFF'
+                  secondaryColor= '#AE9AFF'
+                  radius='12.5'
+                  ariaLabel='mutating-dots-loading'
+                  wrapperStyle={{}}
+                  wrapperClass=''
+                  visible={true}
+                />
+            </div>
             : <Outlet />
           }
       </>

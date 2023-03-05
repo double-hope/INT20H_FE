@@ -90,5 +90,6 @@ export const smallInfo = () => css`
     max-width: 300px;
     font-weight: 400;
     text-align: center;
+    margin-bottom: 10px;
     padding: 0 5px;
 `;

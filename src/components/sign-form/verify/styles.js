@@ -20,6 +20,7 @@ export const signForm = () => css`
 
 export const line = () => css`
     text-decoration: underline;
+    margin-bottom: 10px;
 `;
 
 export const link = () => css`
